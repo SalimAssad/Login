@@ -10,5 +10,3 @@ if($password == $verify_password){
     mysqli_query($connection, "update from Clientes set password = '$password' where idCliente = '$idClient'");
     header("Location: Login.php");
 }
-
-prueba;
