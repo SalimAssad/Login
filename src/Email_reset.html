@@ -3,15 +3,24 @@
 <head lang="es">
     <meta charset="UTF-8">
     <title>Reiniciar contraseña</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
-<div>
-    <label>Ingresa tu email</label>
-    <form action="Send_reset_email.php" method="post">
-        <input type="email" name="email" placeholder="ejemplo@hotmail.com">
-        <input type="submit">
-    </form>
-    <p>Se enviara un enlace para reiniciar la contraseña al correo ingresado.</p>
+<div align="center">
+    <div align="left" style="width: 200px; height: 140px; padding: 10px; margin-top: 130px;">
+        <label class="control-label" for="email">Ingresa tu email</label>
+
+        <form action="Send_reset_email.php" method="post">
+            <input class="form-control" type="email" id="email" name="email" placeholder="ejemplo@hotmail.com">
+            <div align="center" style="margin: 10px">
+                <input class="btn" align="center" type="submit">
+            </div>
+        </form>
+    </div>
+    <div style="width: 400px;">
+        <p style="font-size: small">Se enviará un enlace para reiniciar la contraseña al correo ingresado.</p>
+    </div>
 </div>
 </body>
 </html>
