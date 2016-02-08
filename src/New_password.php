@@ -1,6 +1,6 @@
 <?php
-if (isset($_GET['idCliente'])) {
-    $idCliente = $_GET['idCliente'];
+    if (isset($_GET['idCliente'])) {
+        $idCliente = $_GET['idCliente'];
     ?>
     <!DOCTYPE html>
     <html>
