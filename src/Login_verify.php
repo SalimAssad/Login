@@ -1,34 +1,35 @@
 <?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: jaime
+ * Date: 2/7/2016
+ * Time: 3:14 PM
+ */
 include_once("MySQLConnection.php");
 
 $user = $_POST["user"];
 $password = $_POST["password"];
 
 
-$query = mysqli_query($connect, "select * from clientes where idCliente = $user");
+$query = mysqli_query($connection, "select * from Clientes where email = '$user'");
 
 if(mysqli_num_rows($query) > 0){
     $row = mysqli_fetch_assoc($query);
 
-    if($row['mostrar']) {
-        if (md5($password) == $row['password']) {
-            session_start();
-            $_SESSION['name'] = $row['nombre'];
-            header('Location: Menu.php');
+        if (($password) == $row['password']) {
+            header('Login.php?login=SESION_INICIADA');
         } else {
-            header('Location: Login.php');
+            header('Location: Login.php?=log=error');
         }
-    }else{
-        header('Location: Login.php');
-    }
+
 }else{
-    $validation_query = mysqli_query($connect, "select idCliente from clientes");
+    $validation_query = mysqli_query($connection, "select idCliente from Clientes");
     if(mysqli_num_rows($validation_query) == 0){
-        header('Location: Registro.php');
+        header('Location: Login.php?=NO_HAY_NADA_EN_BDD');
     }else{
-        header('Location: Login.php');
+        header('Login.php?login=SESION_INICIADA');
     }
 }
 
-mysqli_close($connect);
+mysqli_close($connection);
 ?>
