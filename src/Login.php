@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: jaime
- * Date: 2/7/2016
- * Time: 3:14 PM
- */
 include_once("MySQLConnection.php");
 ?>
 <!DOCTYPE html>
@@ -27,7 +21,7 @@ include_once("MySQLConnection.php");
             <input type="submit">
             <a href="Registro.php"> <input type="button" value="Register"> </a>
             <br>
-            <a href="Send_reset_email.php" <label>Olvidaste tu contraseña? Haz click aquí</label> </a>
+            <a href="Email_reset.html" <label>Olvidaste tu contraseña? Haz click aquí</label> </a>
 
             
             

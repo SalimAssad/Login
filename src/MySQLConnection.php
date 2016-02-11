@@ -2,5 +2,5 @@
 
 $connection = mysqli_connect("localhost", "root", "excelsos", "Prueba");
 
-if($connection -> connect_error)
-    die("Connection failed: " . $connection -> connect_error);
+if(!$connection)
+    exit("Error - no se pudo conectar con la base de datos");

@@ -1,5 +1,5 @@
 <?php
-include_once("MySQLConnection");
+include_once("MySQLConnection.php");
 
 $usuario = $_POST["user"];
 $correo = $_POST["email"];
@@ -8,7 +8,8 @@ $conf = $_POST["vpass"];
 
 if($pase == $conf){
     $pase = md5($pase);
-    mysqli_query($connection,"INSERT INTO clientes (nombre,email,password) values($usuario,$correo,$pase);");
+    mysqli_query($connection,"INSERT INTO Clientes (nombre,email,password) values('$usuario','$correo','$pase');");
+    mysqli_error($connection);
     header("Location: Login.php?login=success");
 }
 else{
