@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: jaime
- * Date: 2/7/2016
- * Time: 3:14 PM
- */
+
 include_once("MySQLConnection.php");
 ?>
 <!DOCTYPE html>
