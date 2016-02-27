@@ -11,7 +11,7 @@ $user = $_POST["user"];
 $password = $_POST["password"];
 
 
-$query = mysqli_query($connection, "select * from Clientes where email = '$user'");
+$query = mysqli_query($connection, "select * from Clientes where email = $user");
 
 if(mysqli_num_rows($query) > 0){
     $row = mysqli_fetch_assoc($query);

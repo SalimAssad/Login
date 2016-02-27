@@ -14,7 +14,7 @@ include_once("MySQLConnection.php");
 </head>
 <body bgcolor="#EEEEEE">
 <div align="center">
-    <div style="width: 200px; height: 150px; padding: 20px; background-color: rgba(0, 0, 0, 0); border: double">
+    <div style="width: 200px; height: 170px; padding: 20px; background-color: rgba(0, 0, 0, 0); border: double">
         <form action="Login_verify.php" method="post">
             <label>Usuario (e-mail)</label>
             <br>
@@ -27,8 +27,8 @@ include_once("MySQLConnection.php");
             <br>
             <input type="submit">
             <a href="Registro.php"> <input type="button" value="Register"> </a>
-            <br>
-            <a href="Send_reset_email.php" <label>Olvidaste tu contraseña? Haz click aquí</label> </a>
+            <br> <br>
+            <a href="Send_reset_email.php" >Olvidaste tu contraseña? Haz click aquí </a>
 
             
             
